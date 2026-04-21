@@ -10,6 +10,6 @@ export default defineConfig({
     tailwindcss(),
     tanstackStart(),
     viteReact(),
-    nitro({ preset: 'bun' }),
+    nitro({ preset: 'bun', scanDirs: ['server'] }),
   ],
 })

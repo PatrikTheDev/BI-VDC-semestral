@@ -1,4 +1,3 @@
-import { defineEventHandler, setResponseStatus } from 'nitro/runtime'
 import { db } from '../../src/db'
 import { sql } from 'drizzle-orm'
 
