@@ -5,5 +5,7 @@ import * as schema from './schema'
 const connectionString =
   process.env.DATABASE_URL ?? 'postgres://postgres:postgres@localhost:5432/printers'
 
-const client = postgres(connectionString)
+const client = postgres(connectionString, {
+  ssl: { rejectUnauthorized: false },
+})
 export const db = drizzle(client, { schema })
